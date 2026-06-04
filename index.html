@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Darren Sheffield — AI enabled technical leadership, integration, automation, operational systems, and app support.">
+    <title>Darren Sheffield | IT, Integration, Automation</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f6f7f4;
+        --panel: #ffffff;
+        --panel-soft: #eef2ed;
+        --text: #1f2522;
+        --muted: #56615a;
+        --line: #d7ddd5;
+        --green: #2d7657;
+        --gold: #9b742b;
+        --red: #9d5148;
+        --steel: #526b7c;
+        --shadow: 0 10px 28px rgba(31, 37, 34, 0.08);
+        --site-max-width: 1080px;
+        --site-line-height: 1.5;
+        --radius: 8px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #101412;
+          --panel: #171d1a;
+          --panel-soft: #1d2622;
+          --text: #edf2ed;
+          --muted: #aeb9b1;
+          --line: #2c3933;
+          --green: #77c49a;
+          --gold: #d2ad62;
+          --red: #d08278;
+          --steel: #93b0c1;
+          --shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        line-height: var(--site-line-height);
+        scrollbar-gutter: stable;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .site {
+        max-width: var(--site-max-width);
+        margin: 0 auto;
+        padding: 28px 20px 42px;
+      }
+
+      .masthead {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 42px;
+      }
+
+      .brand {
+        color: var(--text);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.52rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        font-size: 1.16rem;
+        font-weight: 680;
+        letter-spacing: 0;
+        line-height: 1.05;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .brand::before {
+        align-items: center;
+        aspect-ratio: 1 / 1;
+        background: color-mix(in oklab, var(--green) 16%, var(--panel));
+        border: 1px solid color-mix(in oklab, var(--green) 45%, var(--line));
+        border-radius: 999px;
+        color: color-mix(in oklab, var(--text) 72%, var(--bg));
+        content: "DS";
+        display: inline-flex;
+        flex: none;
+        font-size: 0.74rem;
+        font-weight: 760;
+        height: 1.82rem;
+        justify-content: center;
+        letter-spacing: 0.04em;
+        width: 1.82rem;
+      }
+
+      .brand:focus-visible {
+        outline: 3px solid rgba(45, 118, 87, 0.35);
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 560px) {
+        .brand {
+          font-size: 1.05rem;
+        }
+
+        .brand::before {
+          font-size: 0.66rem;
+          height: 1.6rem;
+          width: 1.6rem;
+        }
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: 0.92rem;
+      }
+
+      .nav a,
+      .button {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        text-decoration: none;
+      }
+
+      .nav a {
+        color: var(--muted);
+        padding: 7px 10px;
+      }
+
+      .nav a:hover,
+      .button:hover {
+        border-color: var(--green);
+        color: var(--green);
+      }
+
+      .hero {
+        align-items: center;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 420px;
+        gap: 34px;
+        margin-bottom: 34px;
+      }
+
+      .eyebrow {
+        color: var(--green);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.11em;
+        margin: 0 0 12px;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: 3rem;
+        letter-spacing: 0;
+        line-height: 1.05;
+        margin: 0 0 18px;
+        max-width: 760px;
+      }
+
+      .lede {
+        color: var(--muted);
+        font-size: 1.12rem;
+        margin: 0;
+        max-width: 730px;
+      }
+
+      .button {
+        align-items: center;
+        background: var(--panel);
+        color: var(--text);
+        display: inline-flex;
+        font-weight: 650;
+        min-height: 42px;
+        padding: 10px 14px;
+      }
+
+      button.button {
+        cursor: pointer;
+        font: inherit;
+      }
+
+      .button.primary {
+        background: var(--green);
+        border-color: var(--green);
+        color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .button.primary {
+          color: #101412;
+        }
+      }
+
+      .visual {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .visual img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+      }
+
+      .section-label {
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.11em;
+        margin: 0 0 12px;
+        text-transform: uppercase;
+      }
+
+      .lanes,
+      .pathways {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 34px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 18px;
+      }
+
+      .card h2 {
+        font-size: 1.18rem;
+        margin: 0 0 8px;
+      }
+
+      .card p {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .tag {
+        border-radius: 999px;
+        display: inline-block;
+        font-size: 0.78rem;
+        font-weight: 700;
+        margin-bottom: 14px;
+        padding: 4px 9px;
+      }
+
+      .tag.green {
+        background: rgba(45, 118, 87, 0.12);
+        color: var(--green);
+      }
+
+      .tag.gold {
+        background: rgba(155, 116, 43, 0.14);
+        color: var(--gold);
+      }
+
+      .tag.steel {
+        background: rgba(82, 107, 124, 0.14);
+        color: var(--steel);
+      }
+
+      .card-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      a:focus-visible,
+      .button:focus-visible {
+        outline: 3px solid rgba(45, 118, 87, 0.35);
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 880px) {
+        .site {
+          padding: 22px 16px 32px;
+        }
+
+        .masthead {
+          margin-bottom: 30px;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+
+        h1 {
+          font-size: 2.35rem;
+        }
+
+        .lede {
+          font-size: 1.04rem;
+        }
+
+        .visual {
+          max-width: 560px;
+        }
+
+        .visual img {
+          max-height: 240px;
+        }
+
+        .lanes,
+        .pathways {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .masthead {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .nav {
+          width: 100%;
+        }
+
+        .nav a {
+          flex: 1 1 calc(50% - 8px);
+          text-align: center;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .card-actions .button {
+          justify-content: center;
+          width: 100%;
+        }
+
+        .visual img {
+          max-height: 190px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="assets/site-controls.css?v=20260603-5">
+    <script src="assets/site-controls.js?v=20260603-5" defer></script>
+  </head>
+  <body>
+    <main class="site">
+      <header class="masthead">
+        <a class="brand" href="index.html" aria-label="Darren Sheffield">Darren Sheffield</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="work-history.html">History</a>
+          <a href="experience.html">Experience</a>
+          <a href="support.html">Apps</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <section class="hero" aria-label="Profile overview">
+        <div>
+          <p class="eyebrow">Technical leadership / AI enabled systems / support operations</p>
+          <h1>Technical leadership for teams that need systems to hold up, adapt, and stay reliable.</h1>
+          <p class="lede">
+            I work where systems meet process and where details meet daily operations: integration delivery,
+            support workflows, data cleanup, and handoffs people can maintain. I am strongest in ambiguous work:
+            seeing around corners, clarifying tradeoffs, and helping teams move without losing the details.
+          </p>
+        </div>
+
+        <picture class="visual">
+          <source srcset="assets/systems-map-dark.png" media="(prefers-color-scheme: dark)">
+        <img src="assets/systems-map.png" alt="Workbench diagram for ERP inputs, automation steps, dashboards, runbooks, and delivery checks">
+      </picture>
+    </section>
+
+    </main>
+  </body>
+</html>

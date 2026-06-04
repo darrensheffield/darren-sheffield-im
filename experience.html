@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Darren Sheffield experience keywords across NetSuite, EDI, Snowflake, Celigo, integrator.io, Avalara, AI, automation, and app development.">
+    <title>Darren Sheffield | Experience</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f6f7f4;
+        --panel: #ffffff;
+        --panel-soft: #eef2ed;
+        --text: #1f2522;
+        --muted: #56615a;
+        --line: #d7ddd5;
+        --green: #2d7657;
+        --gold: #9b742b;
+        --red: #9d5148;
+        --steel: #526b7c;
+        --shadow: 0 10px 28px rgba(31, 37, 34, 0.08);
+        --site-max-width: 1080px;
+        --site-line-height: 1.5;
+        --radius: 8px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #101412;
+          --panel: #171d1a;
+          --panel-soft: #1d2622;
+          --text: #edf2ed;
+          --muted: #aeb9b1;
+          --line: #2c3933;
+          --green: #77c49a;
+          --gold: #d2ad62;
+          --red: #d08278;
+          --steel: #93b0c1;
+          --shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        line-height: var(--site-line-height);
+        scrollbar-gutter: stable;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .site {
+        position: relative;
+        z-index: 2;
+        max-width: var(--site-max-width);
+        margin: 0 auto;
+        padding: 28px 20px 42px;
+      }
+
+      .masthead {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 42px;
+      }
+
+      .brand {
+        color: var(--text);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.52rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        font-size: 1.16rem;
+        font-weight: 680;
+        letter-spacing: 0;
+        line-height: 1.05;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .brand::before {
+        align-items: center;
+        aspect-ratio: 1 / 1;
+        background: color-mix(in oklab, var(--green) 16%, var(--panel));
+        border: 1px solid color-mix(in oklab, var(--green) 45%, var(--line));
+        border-radius: 999px;
+        color: color-mix(in oklab, var(--text) 72%, var(--bg));
+        content: "DS";
+        display: inline-flex;
+        flex: none;
+        font-size: 0.74rem;
+        font-weight: 760;
+        height: 1.82rem;
+        justify-content: center;
+        letter-spacing: 0.04em;
+        width: 1.82rem;
+      }
+
+      .brand:focus-visible {
+        outline: 3px solid rgba(45, 118, 87, 0.35);
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 560px) {
+        .brand {
+          font-size: 1.05rem;
+        }
+
+        .brand::before {
+          font-size: 0.66rem;
+          height: 1.6rem;
+          width: 1.6rem;
+        }
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: 0.92rem;
+      }
+
+      .nav a,
+      .button {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        text-decoration: none;
+      }
+
+      .nav a {
+        color: var(--muted);
+        padding: 7px 10px;
+      }
+
+      .nav a[aria-current="page"],
+      .nav a:hover,
+      .button:hover {
+        border-color: var(--green);
+        color: var(--green);
+      }
+
+      .eyebrow,
+      .section-label {
+        color: var(--green);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.11em;
+        margin: 0 0 12px;
+        text-transform: uppercase;
+      }
+
+      .section-label {
+        color: var(--muted);
+      }
+
+      h1 {
+        font-size: 3rem;
+        letter-spacing: 0;
+        line-height: 1.05;
+        margin: 0 0 18px;
+        max-width: 800px;
+      }
+
+      h2 {
+        font-size: 1.18rem;
+        margin: 0 0 8px;
+      }
+
+      .lede,
+      .card p,
+      .keyword-list {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .lede {
+        font-size: 1.1rem;
+        max-width: 760px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 24px 0 34px;
+      }
+
+      .button {
+        align-items: center;
+        background: var(--panel);
+        color: var(--text);
+        display: inline-flex;
+        font-weight: 650;
+        min-height: 42px;
+        padding: 10px 14px;
+      }
+
+      .button.primary {
+        background: var(--green);
+        border-color: var(--green);
+        color: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .button.primary {
+          color: #101412;
+        }
+
+        .card {
+          background: color-mix(in oklab, var(--panel) 82%, var(--bg) 18%);
+        }
+
+        h1,
+        .lede {
+          text-shadow: 0 1px 10px rgba(0, 0, 0, 0.44);
+        }
+
+        .experience-cloud {
+          opacity: 0.48;
+        }
+
+        .experience-cloud-scrim {
+          background:
+            radial-gradient(circle at 22% 22%, rgba(16, 20, 18, 0.42), rgba(16, 20, 18, 0.08) 43%, transparent 70%),
+            linear-gradient(to bottom, rgba(16, 20, 18, 0.18), rgba(16, 20, 18, 0.34));
+        }
+      }
+
+      .experience-cloud {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        opacity: 0.54;
+        z-index: 0;
+      }
+
+      .experience-cloud-scrim {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at 22% 18%, rgba(16, 20, 18, 0.28), rgba(16, 20, 18, 0.02) 44%, transparent 68%),
+          linear-gradient(to bottom, rgba(16, 20, 18, 0.07), rgba(16, 20, 18, 0.16));
+      }
+
+      .keyword-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 28px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 18px;
+      }
+
+      .keyword-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        list-style: none;
+        margin-top: 10px;
+        padding: 0;
+      }
+
+      .keyword-list li {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 9px;
+        background: color-mix(in oklab, var(--panel-soft) 82%, transparent);
+      }
+
+      h1,
+      .lede {
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.14);
+      }
+
+      a:focus-visible,
+      .button:focus-visible {
+        outline: 3px solid rgba(45, 118, 87, 0.35);
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 820px) {
+        .site {
+          padding: 22px 16px 32px;
+        }
+
+        h1 {
+          font-size: 2.35rem;
+        }
+
+        .keyword-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .masthead {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .nav {
+          width: 100%;
+        }
+
+        .nav a {
+          flex: 1 1 calc(50% - 8px);
+          text-align: center;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .actions .button {
+          justify-content: center;
+          width: 100%;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="assets/site-controls.css?v=20260603-5">
+    <script src="assets/site-controls.js?v=20260603-5" defer></script>
+  </head>
+  <body>
+    <canvas class="experience-cloud" id="experienceCanvas" aria-hidden="true"></canvas>
+    <div class="experience-cloud-scrim" aria-hidden="true"></div>
+
+    <main class="site">
+      <header class="masthead">
+        <a class="brand" href="index.html" aria-label="Darren Sheffield">Darren Sheffield</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="work-history.html">History</a>
+          <a href="experience.html" aria-current="page">Experience</a>
+          <a href="support.html">Apps</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <section aria-label="Experience overview">
+        <p class="eyebrow">AI enabled experience</p>
+        <h1>Systems leadership across integration, support operations, automation, and AI-assisted delivery.</h1>
+        <p class="lede">
+          I use AI as part of the working toolkit: speeding up analysis, documentation, data cleanup,
+          scripts, review queues, and support workflows while keeping judgment, privacy, and delivery discipline in the loop.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="contact.html">Contact</a>
+          <a class="button" href="work-history.html">Work history</a>
+        </div>
+      </section>
+
+      <section class="keyword-grid" aria-label="Experience keyword groups">
+        <article class="card">
+          <h2>Support operations</h2>
+          <p>
+            Built and stabilized support workflows across ticketing, CRM, telephony, IVR,
+            knowledge base, vendor coordination, escalation paths, and team training.
+          </p>
+          <ul class="keyword-list">
+            <li>Zendesk</li>
+            <li>contact center</li>
+            <li>customer support operations</li>
+            <li>support workflows</li>
+            <li>escalation handling</li>
+            <li>knowledge base</li>
+            <li>service desk</li>
+            <li>ticketing workflows</li>
+            <li>client-facing support</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>ERP and integration</h2>
+          <p>
+            Implementation and administration work across ERP delivery, integration flows,
+            tax and EDI touchpoints, controls, UAT, go-live readiness, and maintainable handoffs.
+          </p>
+          <ul class="keyword-list">
+            <li>NetSuite</li>
+            <li>EDI</li>
+            <li>Celigo</li>
+            <li>integrator.io</li>
+            <li>Avalara</li>
+            <li>Oracle</li>
+            <li>SuiteScript</li>
+            <li>SuiteCloud</li>
+            <li>UAT</li>
+            <li>go-live</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Data and automation</h2>
+          <p>
+            Reporting and automation work across data warehouses, SQL, Python, APIs, dashboards,
+            operational alerts, and cleanup for repeated manual processes.
+          </p>
+          <ul class="keyword-list">
+            <li>AI enabled</li>
+            <li>clear communicator</li>
+            <li>Snowflake</li>
+            <li>SQL</li>
+            <li>REST</li>
+            <li>API</li>
+            <li>Git</li>
+            <li>Python</li>
+            <li>dashboards</li>
+            <li>OCR</li>
+            <li>workflow automation</li>
+            <li>source-backed data</li>
+            <li>reporting</li>
+            <li>performance optimization</li>
+            <li>release management</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Apps and leadership</h2>
+          <p>
+            Mentoring and clear communication through launches, escalation decisions, runbook transitions,
+            release notes, app-support planning, and local-first app work.
+          </p>
+          <ul class="keyword-list">
+            <li>AI Consultant</li>
+            <li>mentor</li>
+            <li>leader</li>
+            <li>team leadership</li>
+            <li>iOS</li>
+            <li>SwiftUI</li>
+            <li>CloudKit</li>
+            <li>SQLite</li>
+            <li>app support</li>
+            <li>release notes</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+      <script>
+      (() => {
+        const canvas = document.getElementById("experienceCanvas");
+        const context = canvas.getContext("2d");
+        const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        let reduceMotion = reduceMotionQuery.matches;
+        let pauseByControls = false;
+        let calmMotion = false;
+        const isDarkMode = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const sharedControlsState = window.siteControls && window.siteControls.getState ? window.siteControls.getState() : null;
+
+        if (sharedControlsState && typeof sharedControlsState.motionPaused === "boolean") {
+          pauseByControls = sharedControlsState.motionPaused;
+        }
+        if (sharedControlsState && typeof sharedControlsState.calmMotion === "boolean") {
+          calmMotion = sharedControlsState.calmMotion;
+        }
+
+        const shouldPauseMotion = () => reduceMotion || pauseByControls;
+        const shouldReduceMotion = () => reduceMotion || pauseByControls || calmMotion;
+        const motionScale = () => calmMotion ? 0.22 : 1;
+        const keywordCards = Array.from(document.querySelectorAll(".keyword-grid .card"))
+          .map((card) => {
+            const keywordItems = card.querySelectorAll(".keyword-list li");
+            return {
+              keywords: Array.from(keywordItems).map((item) => item.textContent.trim()).filter(Boolean),
+            };
+          });
+
+        const keywordWeightByLabel = {
+          "NetSuite": 1.6, "EDI": 1.35, "Snowflake": 1.25, "Celigo": 1.18,
+          "integrator.io": 1.28, "Avalara": 1.18, "AI enabled": 1.55,
+          "mentor": 1.08, "leader": 1.08, "clear communicator": 1.05, "AI Consultant": 1.2,
+          "Director of IT": 1.15, "ERP": 1.34, "integration": 1.32, "SuiteScript": 1.14,
+          "UAT": 1.02, "go-live": 1.04, "Oracle": 1.02, "SuiteCloud": 1.02,
+          "SQL": 1.06, "REST": 0.98, "API": 1.02, "Git": 0.92, "Python": 1.22, "automation": 1.32,
+          "dashboards": 1.08, "OCR": 0.96, "reporting": 0.96,
+          "performance optimization": 0.95, "release management": 0.95, "Jira": 0.88,
+          "iOS": 1.12, "SwiftUI": 1.1, "CloudKit": 1.05, "SQLite": 1.05,
+          "app support": 1.06, "release notes": 0.9, "macOS": 0.98, "source-backed data": 1.02
+        };
+
+        const ambientWords = [];
+        const seenAmbient = new Set();
+        keywordCards.forEach((card) => {
+          card.keywords.forEach((label) => {
+            if (!seenAmbient.has(label)) {
+              seenAmbient.add(label);
+              ambientWords.push([label, keywordWeightByLabel[label] || 1]);
+            }
+          });
+        });
+
+        const font = '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+        let particles = [];
+        let width = 0;
+        let height = 0;
+        let animationFrame = 0;
+        let themeTick = 0;
+
+        const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+
+        const colorFor = (index) => {
+          const palette = getComputedStyle(document.documentElement);
+          const colors = [
+            palette.getPropertyValue("--green").trim(),
+            palette.getPropertyValue("--gold").trim(),
+            palette.getPropertyValue("--steel").trim(),
+            palette.getPropertyValue("--red").trim()
+          ];
+          return colors[index % colors.length];
+        };
+
+        const roundRect = (context2, x, y, w, h, radius) => {
+          const r = Math.min(radius, w / 2, h / 2);
+          context2.beginPath();
+          context2.moveTo(x + r, y);
+          context2.arcTo(x + w, y, x + w, y + h, r);
+          context2.arcTo(x + w, y + h, x, y + h, r);
+          context2.arcTo(x, y + h, x, y, r);
+          context2.arcTo(x, y, x + w, y, r);
+          context2.closePath();
+        };
+
+        const drawAmbient = () => {
+          const glow = context.createRadialGradient(width * 0.28, height * 0.16, 60, width * 0.28, height * 0.16, Math.max(width, height) * 0.82);
+          glow.addColorStop(0, "rgba(45, 118, 87, 0.14)");
+          glow.addColorStop(0.35, "rgba(155, 116, 43, 0.04)");
+          glow.addColorStop(1, "rgba(16, 20, 18, 0)");
+          context.fillStyle = glow;
+          context.fillRect(0, 0, width, height);
+
+          const sweep = context.createRadialGradient(width * 0.77, height * 0.88, 40, width * 0.77, height * 0.88, Math.max(width, height) * 0.8);
+          sweep.addColorStop(0, "rgba(82, 107, 124, 0.06)");
+          sweep.addColorStop(1, "rgba(16, 20, 18, 0)");
+          context.fillStyle = sweep;
+          context.fillRect(0, 0, width, height);
+        };
+
+        const createParticle = ([label, weight], index) => {
+          const size = clamp(Math.max(15, Math.min(28, 14 + weight * 9)), 15, 28);
+          context.font = `700 ${size}px ${font}`;
+          const measured = context.measureText(label);
+          const textWidth = measured.width + 24;
+          const textHeight = size * 1.45;
+          const safeWidth = Math.max(120, width - 120);
+          const safeHeight = Math.max(120, height - 120);
+          const staticX = 70 + ((index * 173) % safeWidth);
+          const staticY = 110 + ((index * 211) % safeHeight);
+
+          return {
+            label,
+            size,
+            textWidth,
+            textHeight,
+            x: shouldPauseMotion() ? clamp(staticX + ((index % 5) * 2), 70, width - 70) : Math.random() * Math.max(80, width - 140) + 60,
+            y: shouldPauseMotion() ? clamp(staticY + ((index % 3) * 2), 110, height - 110) : Math.random() * Math.max(120, height - 160) + 60,
+            vx: shouldPauseMotion() ? 0 : ((Math.random() * 0.58 + 0.12) * motionScale()) * (index % 2 ? 1 : -1),
+            vy: shouldPauseMotion() ? 0 : ((Math.random() * 0.42 + 0.12) * motionScale()) * (index % 3 ? 1 : -1),
+            color: colorFor(index),
+            phase: index * 0.87
+          };
+        };
+
+        const wrap = (particle) => {
+          const marginX = particle.textWidth * 0.4;
+          const marginY = particle.textHeight * 0.4;
+
+          if (particle.x < -marginX) {
+            particle.x = width + marginX;
+          } else if (particle.x > width + marginX) {
+            particle.x = -marginX;
+          }
+
+          if (particle.y < -marginY) {
+            particle.y = height + marginY;
+          } else if (particle.y > height + marginY) {
+            particle.y = -marginY;
+          }
+        };
+
+        const protectedZones = () => Array.from(document.querySelectorAll(".masthead, [aria-label='Experience overview'], .keyword-grid .card"))
+          .map((element) => element.getBoundingClientRect())
+          .filter((rect) => rect.width > 0 && rect.height > 0)
+          .map((rect) => ({
+            left: rect.left - 30,
+            top: rect.top - 30,
+            right: rect.right + 30,
+            bottom: rect.bottom + 30
+          }));
+
+        const intersectsProtectedZone = (x, y, boxWidth, boxHeight, zones) => {
+          const left = x - boxWidth / 2;
+          const right = x + boxWidth / 2;
+          const top = y - boxHeight / 2;
+          const bottom = y + boxHeight / 2;
+
+          return zones.some((zone) => (
+            right > zone.left &&
+            left < zone.right &&
+            bottom > zone.top &&
+            top < zone.bottom
+          ));
+        };
+
+        const draw = (time) => {
+          themeTick += 1;
+          if (themeTick % 180 === 0) {
+            particles.forEach((particle, index) => {
+              particle.color = colorFor(index);
+            });
+          }
+
+          context.clearRect(0, 0, width, height);
+          drawAmbient();
+          const zones = protectedZones();
+
+          particles.forEach((particle) => {
+          if (!shouldReduceMotion()) {
+            const driftScale = motionScale();
+            const driftX = Math.sin((time * 0.0002) + particle.phase) * (0.14 * driftScale);
+            const driftY = Math.cos((time * 0.00023) + particle.phase + 1.4) * (0.1 * driftScale);
+            particle.x += particle.vx + driftX;
+            particle.y += particle.vy + driftY;
+            wrap(particle);
+          }
+
+            const pulse = calmMotion ? Math.sin(time / 900 + particle.phase) * 0.55 : Math.sin(time / 900 + particle.phase) * 1.8;
+            const size = particle.size + pulse;
+            context.font = `700 ${size}px ${font}`;
+            context.textBaseline = "middle";
+            context.textAlign = "center";
+            const metrics = context.measureText(particle.label);
+            const boxWidth = metrics.width + 26;
+            const boxHeight = size + 16;
+            const textAlpha = shouldPauseMotion() ? 0.05 : calmMotion ? 0.045 : 0.06;
+
+            if (!shouldPauseMotion() && (particle.x < -boxWidth || particle.x > width + boxWidth || particle.y < -boxHeight || particle.y > height + boxHeight)) {
+              return;
+            }
+
+            const x = particle.x;
+            const y = particle.y;
+
+            if (intersectsProtectedZone(x, y, boxWidth, boxHeight, zones)) {
+              return;
+            }
+
+            context.globalAlpha = isDarkMode() ? textAlpha * 0.78 : textAlpha;
+            context.fillStyle = particle.color;
+            roundRect(context, x - boxWidth / 2, y - boxHeight / 2, boxWidth, boxHeight, 9);
+            context.fill();
+
+            context.shadowColor = isDarkMode() ? "rgba(0, 0, 0, 0.72)" : "rgba(255, 255, 255, 0.72)";
+            context.shadowBlur = 7;
+            context.lineWidth = isDarkMode() ? 3.6 : 2.8;
+            context.strokeStyle = isDarkMode() ? "rgba(10, 15, 12, 0.82)" : "rgba(246, 247, 244, 0.86)";
+            context.globalAlpha = isDarkMode() ? 0.5 : 0.44;
+            context.strokeText(particle.label, x, y);
+
+            context.shadowBlur = 0;
+            context.globalAlpha = isDarkMode() ? 0.62 : 0.54;
+            context.fillStyle = particle.color;
+            context.fillText(particle.label, x, y);
+            context.globalAlpha = 1;
+          });
+
+          if (!shouldPauseMotion()) {
+            animationFrame = window.requestAnimationFrame(draw);
+          }
+        };
+
+        const resize = () => {
+          const ratio = Math.min(window.devicePixelRatio || 1, 2);
+          width = Math.max(320, Math.floor(window.innerWidth || 320));
+          height = Math.max(320, Math.floor(window.innerHeight || 320));
+          canvas.width = Math.floor(width * ratio);
+          canvas.height = Math.floor(height * ratio);
+          context.setTransform(ratio, 0, 0, ratio, 0, 0);
+          particles = ambientWords.map(createParticle);
+
+          if (shouldPauseMotion()) {
+            context.clearRect(0, 0, width, height);
+            drawAmbient();
+          }
+        };
+
+        const applyMotionState = () => {
+          if (animationFrame) {
+            cancelAnimationFrame(animationFrame);
+            animationFrame = 0;
+          }
+
+          resize();
+
+          if (!shouldPauseMotion()) {
+            animationFrame = window.requestAnimationFrame(draw);
+          }
+        };
+
+        const updateMotionSetting = (event) => {
+          const next = event.matches;
+          if (next === reduceMotion) return;
+          reduceMotion = next;
+          applyMotionState();
+        };
+
+        const syncSharedControls = (event) => {
+          if (!event || !event.detail) {
+            return;
+          }
+
+          const nextPause = event.detail.motionPaused;
+          const nextCalm = event.detail.calmMotion;
+
+          if (typeof nextPause === "boolean") {
+            pauseByControls = nextPause;
+          }
+          if (typeof nextCalm === "boolean") {
+            calmMotion = nextCalm;
+          }
+          applyMotionState();
+        };
+
+        resize();
+        window.addEventListener("resize", resize, { passive: true });
+        if (reduceMotionQuery.addEventListener) {
+          reduceMotionQuery.addEventListener("change", updateMotionSetting);
+        } else {
+          reduceMotionQuery.addListener(updateMotionSetting);
+        }
+        window.addEventListener("site-controls:statechange", syncSharedControls);
+        applyMotionState();
+      })();
+    </script>
+  </body>
+</html>
