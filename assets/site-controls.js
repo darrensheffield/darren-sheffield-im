@@ -45,6 +45,7 @@
   let menuButton;
   let popover;
   let menuOpen = false;
+  let motionControlEnabled = false;
 
   const readSettings = () => {
     try {
@@ -86,7 +87,9 @@
       focusMode
     } = state;
 
-    root.classList.toggle("site-controls-motion-paused", motionPaused);
+    const effectiveMotionPaused = motionControlEnabled && motionPaused;
+
+    root.classList.toggle("site-controls-motion-paused", effectiveMotionPaused);
     root.classList.toggle("site-controls-large-text", largerText);
     root.classList.toggle("site-controls-high-contrast", highContrast);
     root.classList.toggle("site-controls-underline-links", underlineLinks);
@@ -97,7 +100,7 @@
 
     if (motionButton) {
       const label = motionPaused ? "Resume motion" : "Pause motion";
-      motionButton.setAttribute("aria-pressed", String(Boolean(motionPaused)));
+      motionButton.setAttribute("aria-pressed", String(Boolean(effectiveMotionPaused)));
       motionButton.setAttribute("aria-label", label + ", animation controls");
       motionIcon.innerHTML = motionPaused ? iconPaths.play : iconPaths.pause;
       motionLabel.textContent = motionPaused ? "Resume" : "Pause";
@@ -116,7 +119,7 @@
     });
 
     window.dispatchEvent(new CustomEvent(EVENT_NAME, {
-      detail: { ...state }
+      detail: { ...state, motionPaused: effectiveMotionPaused }
     }));
   };
 
@@ -182,27 +185,29 @@
     const actions = document.createElement("div");
     actions.className = "site-controls-actions";
 
-    motionButton = document.createElement("button");
-    motionButton.type = "button";
-    motionButton.className = "site-controls-btn site-controls-motion-btn";
+    if (motionControlEnabled) {
+      motionButton = document.createElement("button");
+      motionButton.type = "button";
+      motionButton.className = "site-controls-btn site-controls-motion-btn";
 
-    motionIcon = document.createElement("span");
-    motionIcon.className = "site-controls-icon";
-    motionIcon.setAttribute("aria-hidden", "true");
+      motionIcon = document.createElement("span");
+      motionIcon.className = "site-controls-icon";
+      motionIcon.setAttribute("aria-hidden", "true");
 
-    motionLabel = document.createElement("span");
-    motionLabel.className = "site-controls-label site-controls-btn-text";
+      motionLabel = document.createElement("span");
+      motionLabel.className = "site-controls-label site-controls-btn-text";
 
-    const motionHelp = document.createElement("span");
-    motionHelp.className = "site-controls-visually-hidden";
-    motionHelp.textContent = "Pause or resume motion";
+      const motionHelp = document.createElement("span");
+      motionHelp.className = "site-controls-visually-hidden";
+      motionHelp.textContent = "Pause or resume motion";
 
-    motionButton.appendChild(motionIcon);
-    motionButton.appendChild(motionLabel);
-    motionButton.appendChild(motionHelp);
-    motionButton.addEventListener("click", () => {
-      setState("motionPaused", !state.motionPaused);
-    });
+      motionButton.appendChild(motionIcon);
+      motionButton.appendChild(motionLabel);
+      motionButton.appendChild(motionHelp);
+      motionButton.addEventListener("click", () => {
+        setState("motionPaused", !state.motionPaused);
+      });
+    }
 
     menuButton = document.createElement("button");
     menuButton.type = "button";
@@ -236,7 +241,9 @@
     });
 
     actions.appendChild(menuButton);
-    actions.appendChild(motionButton);
+    if (motionButton) {
+      actions.appendChild(motionButton);
+    }
 
     popover = document.createElement("section");
     popover.id = "site-controls-popover";
@@ -303,14 +310,15 @@
 
   const init = () => {
     Object.assign(state, readSettings());
+    motionControlEnabled = Boolean(document.getElementById("experienceCanvas"));
     createCluster();
     applyState();
     handleOutsideAndEscape();
   };
 
   window.siteControls = {
-    getState: () => ({ ...state }),
-    isMotionPaused: () => Boolean(state.motionPaused)
+    getState: () => ({ ...state, motionPaused: Boolean(motionControlEnabled && state.motionPaused) }),
+    isMotionPaused: () => Boolean(motionControlEnabled && state.motionPaused)
   };
 
   if (document.readyState === "loading") {

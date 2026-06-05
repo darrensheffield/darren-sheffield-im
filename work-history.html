@@ -209,6 +209,45 @@
         margin: 0;
       }
 
+      .certifications {
+        margin: 0 0 34px;
+      }
+
+      .certification-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .certification-card {
+        display: grid;
+        gap: 12px;
+      }
+
+      .credential-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .credential-pill {
+        border: 1px solid color-mix(in oklab, var(--green) 28%, var(--line));
+        border-radius: 999px;
+        color: color-mix(in oklab, var(--text) 78%, var(--green));
+        display: inline-flex;
+        font-size: 0.82rem;
+        font-weight: 680;
+        line-height: 1.15;
+        padding: 6px 9px;
+      }
+
+      .credential-note {
+        color: var(--muted);
+        font-size: 0.94rem;
+        margin: 12px 0 0;
+        max-width: 760px;
+      }
+
       .timeline {
         display: grid;
         gap: 18px;
@@ -395,6 +434,7 @@
         }
 
         .summary,
+        .certification-grid,
         .timeline-shell,
         .timeline-item {
           grid-template-columns: 1fr;
@@ -514,7 +554,7 @@
       }
     </style>
     <link rel="stylesheet" href="assets/site-controls.css?v=20260603-5">
-    <script src="assets/site-controls.js?v=20260603-5" defer></script>
+    <script src="assets/site-controls.js?v=20260604-1" defer></script>
   </head>
   <body>
     <main class="site">
@@ -551,6 +591,47 @@
           <h2>Automation and data</h2>
           <p>Scripts, SQL, dashboards, alerts, and source-backed tools that reduced repeated reconciliation and manual follow-up.</p>
         </article>
+      </section>
+
+      <section class="certifications" aria-label="Certifications">
+        <p class="section-label">Certifications</p>
+        <div class="certification-grid">
+          <article class="card certification-card">
+            <h2>NetSuite credentials</h2>
+            <p>ERP, administration, development, web services, analytics, financial, and AI foundations credentials from Oracle.</p>
+            <div class="credential-list" aria-label="NetSuite certification areas">
+              <span class="credential-pill">ERP Consultant</span>
+              <span class="credential-pill">Administrator</span>
+              <span class="credential-pill">SuiteFoundation</span>
+              <span class="credential-pill">Application Developer</span>
+              <span class="credential-pill">Web Services</span>
+              <span class="credential-pill">Analytics</span>
+              <span class="credential-pill">Financial</span>
+              <span class="credential-pill">AI Foundations</span>
+            </div>
+          </article>
+          <article class="card certification-card">
+            <h2>Oracle foundations</h2>
+            <p>Cloud, data platform, and AI foundations work that supports integration delivery and reporting conversations.</p>
+            <div class="credential-list" aria-label="Oracle certification areas">
+              <span class="credential-pill">OCI Foundations</span>
+              <span class="credential-pill">OCI AI Foundations</span>
+              <span class="credential-pill">Data Platform</span>
+              <span class="credential-pill">Fusion AI Agent Studio</span>
+            </div>
+          </article>
+          <article class="card certification-card">
+            <h2>Support and platform roots</h2>
+            <p>A proven history of obtaining relevant domain expertise as the work changes: Apple support and repair, helpdesk operations, project delivery, and platform fundamentals.</p>
+            <div class="credential-list" aria-label="Support and platform certification areas">
+              <span class="credential-pill">Zendesk Support</span>
+              <span class="credential-pill">ACSP</span>
+              <span class="credential-pill">ACMT</span>
+              <span class="credential-pill">CAPM</span>
+              <span class="credential-pill">CompTIA A+</span>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="history-stage" data-history-stage aria-label="Professional timeline">
