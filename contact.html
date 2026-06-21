@@ -273,6 +273,17 @@
         max-width: 680px;
       }
 
+      .profile-link {
+        color: var(--muted);
+        font-size: 0.94rem;
+        margin: -20px 0 32px;
+      }
+
+      .profile-link a {
+        color: var(--green);
+        font-weight: 650;
+      }
+
       a:focus-visible,
       .button:focus-visible {
         outline: 3px solid rgba(45, 118, 87, 0.35);
@@ -327,10 +338,10 @@
         <a class="brand" href="index.html" aria-label="Darren Sheffield">Darren Sheffield</a>
         <nav class="nav" aria-label="Primary navigation">
           <a href="index.html">Home</a>
-          <a href="work-history.html">History</a>
-          <a href="experience.html">Experience</a>
-          <a href="support.html">Apps</a>
+          <a href="work-history.html">Experience</a>
+          <a href="experience.html">Skillset</a>
           <a href="contact.html" aria-current="page">Contact</a>
+          <a href="darren.html">Darren</a>
         </nav>
       </header>
 
@@ -344,12 +355,15 @@
           <a class="button primary" href="https://www.linkedin.com/in/dbshef/">LinkedIn</a>
           <button class="button" type="button" data-email-action>Email Darren</button>
         </div>
+        <p class="profile-link">
+          <a href="https://github.com/darrensheffield" rel="me">GitHub</a>
+        </p>
       </section>
 
       <section class="availability" aria-label="Availability">
         <p>
           Availability note: I am currently employed full time and not taking freelance or side projects.
-          Professional and support messages can still route through this page.
+          Professional messages can still route through this page.
         </p>
       </section>
 
@@ -361,15 +375,9 @@
         </article>
 
         <article class="card">
-          <span class="tag gold">App support</span>
-          <h2>iOS app support</h2>
-          <p>For app issues, include the app name, device model, iOS version, screenshots if useful, and what happened before the problem appeared.</p>
-        </article>
-
-        <article class="card">
           <span class="tag steel">Professional follow-up</span>
           <h2>General contact</h2>
-          <p>Use this for public-profile questions, work-history context, or source-backed examples that are appropriate to discuss publicly.</p>
+          <p>Use this for public-profile questions, experience context, or source-backed examples that are appropriate to discuss publicly.</p>
         </article>
       </section>
 
