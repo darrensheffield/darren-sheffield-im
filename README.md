@@ -4,6 +4,11 @@ Static GitHub Pages site for `darren.sheffield.im`.
 
 The site is intentionally plain HTML, CSS, and JavaScript so it can publish directly from the repository root.
 
+## Internal editing guidance
+
+- `_internal/style-guide.md` captures the working style rules for copy, layout, navigation, contact treatment, accessibility captures, and review PDFs.
+- Files under `_internal/` are repo guidance, not public site pages or navigation targets.
+
 ## Private area entry
 
 - `darren.html` is a public entry point for the local private workflow.
