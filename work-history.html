@@ -227,18 +227,36 @@
       .credential-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
+        align-items: center;
+        column-gap: 9px;
+        row-gap: 7px;
       }
 
       .credential-pill {
-        border: 1px solid color-mix(in oklab, var(--green) 28%, var(--line));
+        background: color-mix(in oklab, var(--green) 12%, var(--panel));
+        border: 1px solid color-mix(in oklab, var(--green) 34%, var(--line));
         border-radius: 999px;
-        color: color-mix(in oklab, var(--text) 78%, var(--green));
+        color: color-mix(in oklab, var(--text) 75%, var(--green));
+        letter-spacing: 0.01em;
         display: inline-flex;
-        font-size: 0.82rem;
-        font-weight: 680;
-        line-height: 1.15;
-        padding: 6px 9px;
+        font-size: 0.74rem;
+        font-weight: 620;
+        line-height: 1.2;
+        align-items: center;
+        padding: 5px 10px;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 560px) {
+        .credential-list {
+          column-gap: 8px;
+          row-gap: 6px;
+        }
+
+        .credential-pill {
+          font-size: 0.72rem;
+          padding: 4px 9px;
+        }
       }
 
       .credential-note {
