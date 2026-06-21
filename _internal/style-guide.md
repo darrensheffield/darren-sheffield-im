@@ -77,10 +77,10 @@ Avoid:
 - Keep the page minimal.
 - Current structure is:
   - `h1` Contact
-  - one short lead line
   - LinkedIn button
   - Email Darren button
   - GitHub button with icon
+- Do not add Contact-page lead copy unless there is a specific message to carry.
 - Do not restore the availability note, lower contact cards, or fallback paragraph unless requested.
 - Do not repeat "Contact" as both eyebrow and heading.
 
